@@ -1,0 +1,25 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: root
+      session:
+        scope: session
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/appservl_moosocial?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password:
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    platform: mysql
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy:  org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: 8989
